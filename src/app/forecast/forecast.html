@@ -1,0 +1,51 @@
+<h1 class="title">Berliner Wetterapp</h1>
+<div class="component-container">
+    <div class="location-wrapper">
+    <div class="location-container">
+        <mat-icon aria-hidden="false" fontIcon="room"></mat-icon>
+        <p class="location-text">Berlin</p>
+
+    </div>
+    <div class="location-container">
+        <mat-icon aria-hidden="false" fontIcon="calendar_today"></mat-icon>
+        <p class="location-text">{{formatted}}</p>
+        
+    </div></div>
+    <div class="data-wrapper">
+        <app-current-weather-card [temperature]="weatherData.current.temperature_2m"
+            [windspeed]="weatherData.current.wind_speed_10m"
+            [weatherCode]="weatherData.current.weather_code"></app-current-weather-card>
+
+    </div>
+    <div class="section-wrapper">
+        <h2>7-Tage-Vorhersage</h2>
+
+        <div class="data-wrapper">
+
+            <div class="icon-container">
+                <p></p>
+                <mat-icon class="category-icon" fontIcon="device_thermostat"></mat-icon>
+                <mat-icon class="category-icon" fontIcon="water_drop"></mat-icon>
+
+            </div>
+
+            <div class="card-container">
+                @for (temp of weatherData?.daily?.temperature_2m_mean; track $index) {
+                <app-weather-card [day]="weatherData.daily.time[$index]" [temperature]="temp"
+                    [precipitation]="weatherData.daily.precipitation_probability_mean[$index]">
+                </app-weather-card>
+                }
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="section-wrapper">
+                <mat-divider></mat-divider>
+
+        <h2>Wetterdiagramm</h2>
+
+        <app-chart-7-day [multi]="multi"></app-chart-7-day>
+    </div>
+</div>

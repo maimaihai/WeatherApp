@@ -1,0 +1,76 @@
+/* .card-container{
+    display: flex;
+    align-items: column;
+    gap: 12px;
+    font-size: 40px;
+    padding: 12px;
+}
+
+.weather-icon{
+    font-size: 60px;
+    flex-shrink: 0;
+    overflow: visible;
+    vertical-align: middle;
+
+}
+
+.icon-wrapper {
+  flex-shrink: 0;    
+  width: 80px;    
+  overflow: visible;
+}
+
+
+mat-divider {
+    height:auto;
+  margin: 0 16px;    
+} */
+
+.card-container {
+  display: flex;
+  align-items: row; 
+  gap: 16px;           
+  padding: 12px;
+  height: 100px;
+}
+
+.icon-wrapper {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  overflow: visible;
+  vertical-align: middle;
+
+}
+
+
+.weather-icon {
+  font-size: 60px;     
+  overflow: visible;
+  vertical-align: middle;
+
+}
+
+mat-divider {
+  align-self: stretch;
+  height: auto;        
+  margin: 0 16px;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  gap: 15px;               
+
+}
+
+.temperature {
+  font-size: 40px; 
+  font-weight: bold;
+}
+
+.windspeed {
+  font-size: 15px;
+}

@@ -1,0 +1,13 @@
+<div class="card-container">
+  <div class="icon-wrapper">
+    <mat-icon class="weather-icon" [fontIcon]="get_weatherIcon()"></mat-icon>
+  </div>
+
+  <mat-divider [vertical]="true"></mat-divider>
+
+  <div class="info-container">
+    <div>Aktuell</div>
+    <div class="temperature">{{ temperature | number:'1.1-2' }} °C</div>
+    <div class="windspeed"> Wind: {{ windspeed | number:'1.1-2' }} km/h</div>
+  </div>
+</div>
