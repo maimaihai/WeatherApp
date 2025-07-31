@@ -1,5 +1,8 @@
 # WetterApp
+Simple Wetterapp für Berlin.\
+Aktuelles Wetter und 7-Tage-Vorhersage.
 
+Genutzte API: open-meteo.com.\
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.3.
 
 ## Development server
